@@ -14,9 +14,7 @@ export default defineNuxtConfig({
 
     extends: [
         './layers/base',
-        './layers/auth',
-        './layers/orders',
-        './layers/users' 
+        './layers/auth'
     ],
 
     // Make Firebase config available via runtime config only
