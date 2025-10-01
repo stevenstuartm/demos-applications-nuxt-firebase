@@ -1,0 +1,13 @@
+packages:
+  - '.'
+  - 'layers/*'
+
+ignoredBuiltDependencies:
+  - vue-demi
+
+onlyBuiltDependencies:
+  - '@firebase/util'
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
+  - esbuild
+  - protobufjs

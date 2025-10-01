@@ -1,0 +1,262 @@
+/* Tailwind CSS v4 */
+@import 'tailwindcss' theme(static);
+@import '@nuxt/ui';
+
+@source '../../../../';
+
+@theme {
+    --font-sans: Inter, system-ui, sans-serif;
+
+    --color-green-50: oklch(0.974 0.017 151.109);
+    --color-green-100: oklch(0.937 0.04 147.501);
+    --color-green-200: oklch(0.873 0.07 150.595);
+    --color-green-300: oklch(0.792 0.097 154.244);
+    --color-green-400: oklch(0.664 0.12 155.552);
+    --color-green-500: oklch(0.6 0.118 158.351); /* primary */
+    --color-green-600: oklch(0.51 0.097 162.353);
+    --color-green-700: oklch(0.438 0.075 169.335);
+    --color-green-800: oklch(0.385 0.06 175.471);
+    --color-green-900: oklch(0.329 0.047 182.177);
+    --color-green-950: oklch(0.237 0.03 191.663);
+}
+
+:root {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    scrollbar-color: auto;
+
+    --ui-primary: var(--color-green-500);
+    --ui-bg: var(--color-gray-950);
+    --ui-bg-muted: var(--color-gray-900);
+    --ui-bg-elevated: var(--color-gray-800);
+    --ui-bg-accented: var(--color-gray-700);
+    --ui-bg-inverted: var(--color-white);
+
+    --ui-text: var(--color-gray-100);
+    --ui-text-muted: var(--color-gray-200);
+    --ui-text-dimmed: var(--color-gray-400);
+    --ui-text-highlighted: var(--color-white);
+
+    --ui-border: var(--color-gray-800);
+    --ui-border-muted: var(--color-gray-800);
+    --ui-border-accented: var(--color-gray-700);
+    --ui-border-inverted: var(--color-white);
+
+    --ui-radius: var(--radius-sm);
+    --ui-container: var(--container-6xl);
+}
+
+/* Comprehensive text hierarchy system */
+:root {
+    /* Primary text: Used for titles, headers, menu items, input labels */
+    --ui-text-primary: var(--color-green-500);
+    
+    /* Content text: Used for input text, table content, main readable content */
+    --ui-text-content: var(--color-white);
+    
+    /* Secondary text: Used for contextual text, descriptions, help text, metadata */
+    --ui-text-secondary: var(--color-gray-400);
+    
+    /* Legacy support */
+    --ui-text-muted: var(--color-gray-500);
+    --ui-text-button: var(--color-black);
+}
+
+/* Base text color - use white for content by default */
+body, 
+html,
+* {
+    color: var(--ui-text-content);
+}
+
+/* Text hierarchy classes */
+.text-primary {
+    color: var(--ui-text-primary);
+}
+
+.text-content {
+    color: var(--ui-text-content);
+}
+
+/* Legacy classes for backward compatibility */
+.text {
+    color: var(--ui-text-primary);
+}
+
+.text-muted {
+    color: var(--ui-text-muted);
+}
+
+.header-text {
+    color: var(--ui-text-primary);
+}
+
+/* Status text utility classes */
+.text-status-success {
+    color: var(--color-green-500);
+}
+
+.text-status-info {
+    color: var(--color-blue-500);
+}
+
+.text-status-warning {
+    color: var(--color-yellow-500);
+}
+
+.text-status-error {
+    color: var(--color-red-500);
+}
+
+/* Role badge color overrides - allow role-specific colors to show */
+.text-red-800 {
+    color: rgb(153 27 27) !important;
+}
+
+.text-blue-800 {
+    color: rgb(30 64 175) !important;
+}
+
+.text-purple-800 {
+    color: rgb(107 33 168) !important;
+}
+
+.text-green-800 {
+    color: rgb(22 101 52) !important;
+}
+
+.text-gray-800 {
+    color: rgb(31 41 55) !important;
+}
+
+/* Button Utility Classes */
+
+.button-secondary,
+.button-secondary * {
+    color: var(--ui-primary) !important;
+    background-color: transparent;
+    border: 1px solid var(--ui-primary);
+    border-radius: var(--ui-radius);
+    transition: all 0.2s ease-in-out;
+}
+
+.button-secondary:hover {
+    background-color: var(--ui-primary);
+    color: var(--ui-text-button) !important;
+}
+
+.button-secondary:hover * {
+    color: var(--ui-text-button) !important;
+}
+
+.button-primary,
+.button-primary * {
+    color: var(--color-white) !important;
+    background-color: var(--ui-primary);
+    border: 1px solid var(--ui-primary);
+    border-radius: var(--ui-radius);
+    transition: all 0.2s ease-in-out;
+}
+
+.button-primary:hover {
+    background-color: var(--color-green-600);
+    border-color: var(--color-green-600);
+}
+
+/* Default button styling for buttons without utility classes */
+button:not([class*="button-"]),
+[role="button"]:not([class*="button-"]),
+input[type="button"]:not([class*="button-"]),
+input[type="submit"]:not([class*="button-"]),
+input[type="reset"]:not([class*="button-"]) {
+    color: var(--ui-text-button) !important;
+    background-color: var(--ui-bg-elevated);
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    transition: all 0.2s ease-in-out;
+}
+
+button:not([class*="button-"]):hover,
+[role="button"]:not([class*="button-"]):hover,
+input[type="button"]:not([class*="button-"]):hover,
+input[type="submit"]:not([class*="button-"]):hover,
+input[type="reset"]:not([class*="button-"]):hover {
+    background-color: var(--ui-bg-accented);
+    border-color: var(--ui-border-accented);
+}
+
+/* Direct utility class for USelect primary text */
+.select-primary-text,
+.select-primary-text *,
+.select-primary-text button,
+.select-primary-text button *,
+.select-primary-text [role="button"],
+.select-primary-text [role="button"] *,
+.select-primary-text [role="combobox"],
+.select-primary-text [role="combobox"] * {
+    color: var(--ui-primary) !important;
+}
+
+/* Nuclear option - force all USelect components */
+[class*="select"]:not(button),
+[class*="select"]:not(button) *:not(button),
+[role="combobox"],
+[role="combobox"] *:not(button),
+[role="listbox"],
+[role="listbox"] *:not(button),
+[aria-haspopup="listbox"],
+[aria-haspopup="listbox"] *:not(button) {
+    color: var(--ui-primary) !important;
+}
+
+/* Global container class for all content containers */
+.content-container-primary {
+    background-color: var(--ui-bg-elevated);
+    border: 0.5px solid var(--color-gray-100);
+    border-radius: 4px;
+    padding: 6px;
+}
+.content-container-secondary {
+    background-color: var(--ui-bg-accented);
+    border: 0.5px solid var(--color-gray-100);
+    border-radius: 4px;
+    padding: 6px;
+}
+
+/* Table-specific container classes */
+.table-container {
+    background-color: var(--ui-bg-elevated);
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+}
+
+.table-header {
+    background-color: var(--ui-bg-accented);
+}
+
+.table-body {
+    background-color: var(--ui-bg-elevated);
+}
+
+/* Navigation menu text styling - specific selectors that exclude styled buttons */
+/* Nuxt UI Navigation Menu */
+[data-radix-collection-item]:not([class*="button-"]),
+[data-radix-collection-item] a:not([class*="button-"]),
+[data-radix-collection-item] button:not([class*="button-"]),
+[data-orientation="vertical"] a:not([class*="button-"]),
+[data-orientation="vertical"] button:not([class*="button-"]),
+.data-[orientation=vertical] a:not([class*="button-"]),
+.data-[orientation=vertical] button:not([class*="button-"]),
+/* UNavigationMenu selectors */
+.UNavigationMenu a:not([class*="button-"]),
+.UNavigationMenu button:not([class*="button-"]),
+.UNavigationMenu span:not([class*="button-"]),
+.UNavigationMenu [data-radix-collection-item]:not([class*="button-"]),
+/* Generic navigation selectors excluding styled buttons */
+nav a:not([class*="button-"]),
+nav button:not([class*="button-"]),
+nav span:not([class*="button-"]),
+aside a:not([class*="button-"]),
+aside button:not([class*="button-"]),
+aside span:not([class*="button-"]) {
+    color: var(--ui-text-primary) !important;
+}

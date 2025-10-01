@@ -1,0 +1,22 @@
+{
+  "topics": [
+    {
+      "label": "Dashboard",
+      "icon": "i-lucide-home",
+      "to": "/",
+      "authConstraint": "dashboard"
+    },
+    {
+      "label": "My Profile",
+      "icon": "i-lucide-user",
+      "to": "/my-profile",
+      "authConstraint": "myProfile"
+    },
+    {
+      "label": "Demo Users",
+      "icon": "i-lucide-users",
+      "to": "/user-management",
+      "authConstraint": "userManagement"
+    }
+  ]
+}

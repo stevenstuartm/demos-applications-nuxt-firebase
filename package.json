@@ -1,0 +1,46 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --dotenv .env.development",
+    "generate": "nuxt generate",
+    "preview": "nuxt build && preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^3.3.2",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@unhead/vue": "^2.0.14",
+    "@vueuse/core": "^13.7.0",
+    "@vueuse/integrations": "^13.7.0",
+    "@vueuse/nuxt": "^13.7.0",
+    "d3": "^7.9.0",
+    "firebase": "^12.1.0",
+    "luxon": "^3.7.1",
+    "nuxt": "^4.0.3",
+    "vue": "^3.5.19",
+    "vue-router": "^4.5.1",
+    "vue-tsc": "^3.0.6"
+  },
+  "devDependencies": {
+    "@firebase/app-types": "^0.9.3",
+    "@nuxtjs/mdc": "^0.17.2",
+    "@tailwindcss/vite": "^4.1.12",
+    "@types/luxon": "^3.7.1",
+    "pnpm": "^10.15.0",
+    "tailwindcss": "^4.1.12"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@firebase/util",
+      "@parcel/watcher",
+      "@tailwindcss/oxide",
+      "esbuild",
+      "protobufjs"
+    ]
+  }
+}
